@@ -1,0 +1,19 @@
+<div id="app">
+    <div class="ui fixed inverted menu">
+        <div class="ui container">
+            <router-link :to="{name: 'home'}" class="header item">Home</router-link>
+            <router-link :to="{name: 'shop'}" class="item">Shop</router-link>
+            <router-link :to="{name: 'contact'}" class="item">Contact</router-link>
+        </div>
+    </div>
+
+    <div class="sidebar">
+        <router-view name="sidebar"></router-view>
+    </div>
+
+    <div class="main">
+        <transition name="bounce" mode="out-in">
+            <router-view></router-view>
+        </transition>
+    </div>
+</div>
